@@ -7,6 +7,7 @@ class DashboardController extends AppController {
         // TODO
         // pobieranie danych z bazy
         // wstawianie danych na widok
-        return $this->render("dashboard");
+        $title = 'HGW';
+        return $this->render("dashboard", );
     }
 }

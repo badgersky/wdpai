@@ -1,6 +1,9 @@
 <?php
 
+$path = trim($_SERVER['REQUEST_URI'], '/');
+$path = parse_url($path, PHP_URL_PATH);
 
-echo "<h1>Hello there!</h1>";
-echo "<h1>General Kenobi!</h1>";
+var_dump($path);
 
+include 'public/views/index.html';
+include 'public/views/dashboard.html';

@@ -10,7 +10,7 @@ class DashboardController extends AppController {
         // wstawianie danych na widok
         $usersRepository = new UsersRepository();
         $users = $usersRepository->getUsers();
-
+    
         $title = 'HGW';
         return $this->render("dashboard", ["title" => $title, "users" => $users]);
     }

@@ -12,6 +12,10 @@ require_once 'src/controllers/DashboardController.php';
 class Routing {
 
     public static $routes = [
+        "register" => [
+            "controller" => "SecurityController",
+            "action" => "register"
+        ],
         "login" => [
             "controller" => "SecurityController",
             "action" => "login"
@@ -32,6 +36,7 @@ class Routing {
             case 'dashboard':
             case '':
             case 'login':
+            case 'register':
                 $controller = Routing::$routes[$path]["controller"];
                 $action = Routing::$routes[$path]["action"];
 

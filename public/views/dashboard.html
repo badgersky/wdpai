@@ -1,13 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <?php include __DIR__ . '/partials/head.html'; ?>
-    <title>DASHBOARD</title>
-</head>
-<body>
+    <title><?= $title; ?></title>
+  </head>
+  <body>
     <?php include __DIR__ . '/partials/nav.html'; ?>
-    <div class="container">
+
+    <div class="container layout">
+      <main>
         <h1>DASHBOARD</h1>
+        <?php foreach($users as $key=>$value): ?>
+        <span><?= $value["username"]; ?></span>
+        <span><?= $value["email"]; ?></span>
+        <br />
+        <?php endforeach; ?>
+      </main>
+      <aside>
+        <p>TODO later</p>
+      </aside>
+      <footer>2026</footer>
     </div>
-</body>
+  </body>
 </html>
